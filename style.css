@@ -1,0 +1,186 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #222, #333);
+    color: #fff;
+    margin: 0;
+    margin-top: 20px;
+}
+
+#mainarea,
+#userStatusArea {
+    padding: 10px;
+    border: 2px solid;
+    border-radius: 12px;
+    border-color: bisque;
+}
+
+#userStatusArea {
+    position: absolute;
+    left: 30px;
+    width: 210px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    word-break: break-word;
+}
+
+#mainarea {
+    text-align: center;
+    position: absolute;
+    margin-left: 280px;
+    width: 800px;
+}
+
+#webTitle{
+    margin-top: 0;
+}
+
+/* Shared styles */
+#promptInput,
+#apis,
+#imageStoreApi {
+    padding: 12px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: large;
+    margin-left: 8px;
+}
+#promptInput,#apis {
+    width: 78%;
+}
+#imageStoreApi {
+    width: 68%;
+}
+
+#generateButton {
+    padding: 12px 20px;
+    margin-top: 16px;
+    border: none;
+    background-color: rgb(3, 160, 168);
+    color: white;
+    font-weight: bolder;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: large;
+}
+
+#generateButton:hover {
+    background-color: rgb(14, 130, 134);
+    transform: scale(1.25);
+}
+
+#generateButton:active {
+    background-color: rgb(92, 218, 224);
+    transform: scale(1);
+}
+
+#downloadbtn {
+    padding: 12px 20px;
+    margin-top: 16px;
+    border: none;
+    background-color: rgb(52, 231, 28);
+    color: white;
+    font-weight: bolder;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: large;
+    display: none;/* Initially hidden */
+    margin: 16px auto 0 auto;
+    text-align: center;
+}
+
+#downloadbtn:hover {
+    background-color: rgb(39, 160, 23);
+    transform: scale(1.25);
+}
+
+#downloadbtn:active {
+    background-color: rgb(85, 247, 64);
+    transform: scale(1);
+}
+
+#generateButton:disabled {
+    background-color: rgb(85, 81, 81);
+    transform: none;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+#info-giver {
+    margin-top: 20px;
+    font-style: italic;
+}
+
+#resultImage {
+    margin-top: 20px;
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #000;
+    display: none;
+    /* Initially hidden */
+}
+
+a {
+    color: rgb(138, 211, 235);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.image-entry {
+    background-color: #444;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+#authToggleBtn {
+    padding: 10px 16px;
+    font-size: medium;
+    background-color: rgb(6, 135, 226);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#authToggleBtn:hover {
+    background-color: rgb(3, 77, 129);
+    transform: scale(1.15);
+}
+
+#authToggleBtn:active {
+    background-color: rgb(56, 183, 238);
+    transform: scale(1);
+}
+
+#authToggleBtn:disabled {
+    background-color: rgb(85, 81, 81);
+    transform: none;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+#userInfo {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align left inside container */
+    gap: 8px;
+}
+
+#userPhoto {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+}
+
+#userInfo p {
+    margin: 4px 0;
+    font-size: medium;
+}

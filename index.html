@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width = 1366, height = 607, initial-scale=1.0">
+    <title>IBM Project Text to Image Generator</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="IBM_Project_Logo_Icon.png" type="image/png" />
+</head>
+
+<body>
+    <div id="userStatusArea">
+        <img id="userPhoto" alt="User Photo" width="60" height="60" style="border-radius: 50%;" />
+        <div id="userInfo" style="display: none;">
+            <p><strong>Email:</strong><br><span id="userEmail"></span></p>
+            <p><strong>Username:</strong><br><span id="userName"></span></p>
+        </div>
+        <button id="authToggleBtn"></button>
+    </div>
+
+    <div id="mainarea">
+        <h1 id="webTitle">Prajwal's AI Image Generator using Stable Diffusion for IBM Project</h1>
+        <form id="promptForm">
+            <label for="promptInput">Enter your prompt:</label>
+            <input type="text" id="promptInput" required /><br>
+            <label for="apis">Enter your API key:</label>
+            <input type="text" id="apis" required /><br>
+            <label for="imageStoreApi">Enter your ImageStoreAPI key:</label>
+            <input type="text" id="imageStoreApi" required /><br>
+            <button type="submit" id="generateButton">Generate</button>
+        </form>
+        <h4 id="info-giver"></h4>
+        <img id="resultImage" alt="Generated Image" />
+        <button id="downloadbtn">Download Image</button>
+        <h3>Note:
+            If you run out of credits or want to generate new API key, create new account, generate a new API key, 
+            and paste it in the appropriate field.<br>
+            For image generation go to <a href="https://platform.stability.ai/account/keys" target="_blank">here</a>,
+            and for image storing, go to <a href="https://api.imgbb.com/" target="_blank">here</a>.<br>
+            Only 8 images can be generated per account for FREE, so generate images wisely.<br>
+        </h3>
+        <div id="imageHistory"></div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-analytics-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-storage-compat.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
